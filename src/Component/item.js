@@ -114,8 +114,8 @@ id = id.replace("/category/", "")
                    {this.state.Items.map((Item => (
                    <div className="card item-card" key={Item.id} >
                      
-                     <div className="skelenton" style={{backgroundImage: `url${Item.image_link}`}}  >
-                      
+                     <div className="skelenton"   >
+                   {/*   <img src={Item.image_url.image} alt=""/>*/}
                      </div>
                 <div className="card-body mt-2">
                          <p className="item-name">Name: {Item.title}</p>

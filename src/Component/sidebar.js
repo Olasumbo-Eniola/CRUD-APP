@@ -104,7 +104,7 @@ export default class Sidebar extends React.Component{
             { this.state.categories.map(category => (
               <div className="row ml-0 mr-0 category" key={category.id} >
                 <div><Link to={`/category/${category.id}`} className="cat hvr-grow">{category.name} </Link></div>
-                <button className="icon-1 btn hvr-grow" onClick={this.openModal  }><i className="fas fa-pencil-alt"></i> </button>
+                <button className="icon-1 btn hvr-grow pr-0 " onClick={this.openModal  }><i className="fas fa-pencil-alt"></i> </button>
                 <Modal show={this.state.showModal} close={this.closeModal} >
                 <form className="row ml-0 mr-0 p-3 " onSubmit={this.Update = (e) => {
   e.preventDefault()
@@ -122,7 +122,7 @@ export default class Sidebar extends React.Component{
             
                 </Modal>
                 
-                <button className="icon btn hvr-grow"
+                <button className="icon btn hvr-grow pr-0"
                 onClick={
                   this.Delete= (e) => {
                     fetch(`http://test.anchoratechs.com/categories/${category.id}`, { method: 'DELETE' })

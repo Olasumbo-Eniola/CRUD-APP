@@ -10,7 +10,7 @@ export default class Category extends React.Component{
     <div className="App pl-2 pr-2 pt-2 pb-2">
 
 <div className="main">
-  <h2>Items</h2>
+  <h2>Create new or select category</h2>
       
        
      
