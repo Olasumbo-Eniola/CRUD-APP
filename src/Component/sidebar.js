@@ -44,7 +44,7 @@ export default class Sidebar extends React.Component{
       });
     }
     componentDidMount(){
-      axios.get(`http://test.anchoratechs.com/categories`)
+      axios.get(`https://test.anchoratechs.com/categories`)
       .then(response => response.data).then(
           (result) => {
               this.setState({
@@ -64,7 +64,7 @@ export default class Sidebar extends React.Component{
           this.setState({
             isLoading: true
         });
-          const response = await fetch (`http://test.anchoratechs.com/categories`, {
+          const response = await fetch (`https://test.anchoratechs.com/categories`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -108,7 +108,7 @@ export default class Sidebar extends React.Component{
                 <Modal show={this.state.showModal} close={this.closeModal} >
                 <form className="row ml-0 mr-0 p-3 " onSubmit={this.Update = (e) => {
   e.preventDefault()
-  fetch(`http://test.anchoratechs.com/categories/${category.id}`, requestOptions)
+  fetch(`https://test.anchoratechs.com/categories/${category.id}`, requestOptions)
   .then(response => response.json())
 .then(data =>{
   swal("Category name updated" ,"", "success")
@@ -125,7 +125,7 @@ export default class Sidebar extends React.Component{
                 <button className="icon btn hvr-grow pr-0"
                 onClick={
                   this.Delete= (e) => {
-                    fetch(`http://test.anchoratechs.com/categories/${category.id}`, { method: 'DELETE' })
+                    fetch(`https://test.anchoratechs.com/categories/${category.id}`, { method: 'DELETE' })
                     .then(res => res.text()) // or res.json()
                     .then(res => {
                       console.log(res)

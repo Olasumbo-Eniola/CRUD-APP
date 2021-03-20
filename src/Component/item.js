@@ -47,7 +47,7 @@ export default class Items extends React.Component{
      
 var id = this.state.path;
 id = id.replace("/category/", "")
-        axios.get(`http://test.anchoratechs.com/items?categories=${id}`)
+        axios.get(`https://test.anchoratechs.com/items?categories=${id}`)
         .then(response => response.data).then(
             (result) => {
                 this.setState({
@@ -90,7 +90,7 @@ id = id.replace("/category/", "")
           let form_data = new FormData();
           form_data.append('file', this.state.files, this.state.files.name);
           form_data.append('name', this.state.name);
-          let url = 'http://test.anchoratechs.com/upload';
+          let url = 'https://test.anchoratechs.com/upload';
           axios.post(url, form_data, {
             headers: {
               'content-type': 'multipart/form-data'
@@ -138,7 +138,7 @@ id = id.replace("/category/", "")
                     form_data.append('description', this.state.description)
                     form_data.append('image', this.state.files)
                     form_data.append('category', category )
-                    let url = `http://test.anchoratechs.com/items/${Item.id}`;
+                    let url = `https://test.anchoratechs.com/items/${Item.id}`;
                     axios.put(url, form_data, {
                       headers: {
                         'content-type': 'multipart/form-data'
@@ -179,7 +179,7 @@ id = id.replace("/category/", "")
                           <button className="btn btns"
                                 onClick={
                                   this.Delete= (e) => {
-                                    fetch(`http://test.anchoratechs.com/items/${Item.id}`, { method: 'DELETE' })
+                                    fetch(`https://test.anchoratechs.com/items/${Item.id}`, { method: 'DELETE' })
                                     .then(res => res.text()) // or res.json()
                                     .then(res => {
                                       //console.log(res)

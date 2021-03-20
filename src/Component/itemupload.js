@@ -51,7 +51,7 @@ handleCategory = (e) => {
       let form_data = new FormData();
       form_data.append('file', this.state.files, this.state.files.name);
       form_data.append('name', this.state.name);
-      let url = 'http://test.anchoratechs.com/upload';
+      let url = 'https://test.anchoratechs.com/upload';
       axios.post(url, form_data, {
         headers: {
           'content-type': 'multipart/form-data'
@@ -74,7 +74,7 @@ handleCategory = (e) => {
       form_data.append('description', this.state.description)
       form_data.append('image', this.state.files)
       form_data.append('category', category )
-      let url = 'http://test.anchoratechs.com/items';
+      let url = 'https://test.anchoratechs.com/items';
       axios.post(url, form_data, {
         headers: {
           'content-type': 'multipart/form-data'
