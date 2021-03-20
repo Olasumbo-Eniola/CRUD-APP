@@ -49,7 +49,7 @@ handleCategory = (e) => {
      
       console.log(this.state);
       let form_data = new FormData();
-      form_data.append('file', this.state.files, this.state.files.name);
+      form_data.append('file[0]', this.state.files, this.state.files.name);
       form_data.append('name', this.state.name);
       let url = 'https://test.anchoratechs.com/upload';
       axios.post(url, form_data, {
@@ -83,7 +83,7 @@ handleCategory = (e) => {
           .then(res => {
             console.log(res.data);
             swal("Item Created Successfully", "", "success")
-            window.location.reload()
+          //  window.location.reload()
           })
           .catch(err => console.log(err))
     }
@@ -96,7 +96,7 @@ handleCategory = (e) => {
                    <h4>Create new item</h4>
                    <div className="upload-img" onKeyDown={this.handleSubmit} >
                     <label className="actual-file" style={{cursor: "pointer"}}><img src="/upload.svg" alt="" /><p>Select Image</p>
-                       <input type="file"   accept="image/png, image/jpeg, image/jpg"  name="" id="" placeholder="" className="" aria-describedby="fileHelpId" onChange={this.handleFile} required hidden />
+                       <input type="file"   hidden name="" id="" placeholder="" className="" aria-describedby="fileHelpId" onChange={this.handleFile} required  />
                      </label>
                   
                    </div>

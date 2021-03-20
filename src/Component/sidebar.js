@@ -4,7 +4,7 @@ import React from "react"
 import axios from "axios";
 import swal from '@sweetalert/with-react'
 import { Link } from "react-router-dom";
-import Modal from "./Modal/Modal.component"
+import Modal from "./Modal/Modal"
 
 export default class Sidebar extends React.Component{
     constructor(props) {
@@ -76,7 +76,7 @@ export default class Sidebar extends React.Component{
           const responseData = await response.json();
           if (!response.ok) {
               throw new Error(responseData.message)
-          } else {
+          }else  {
           console.log("great")
           this.setState({
             isLoading: true

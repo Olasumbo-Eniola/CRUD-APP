@@ -208,6 +208,9 @@ bottom: 0px;
   .card{
     height: 700px;
   }
+  .sidenav a{
+    padding: 6px 8px 6px 0px;
+  }
 }
 @media screen and (max-width: 411px){
   .sidenav{
@@ -219,12 +222,22 @@ bottom: 0px;
   .cate{
     width: 100px;
   }
-.sidenav a{
-  padding: 6px 8px 6px 0px;
-}
+
 
 }
 .diff{
   width: auto !important;
-  height: 550px !important;
+  height: auto;
+}
+.container{
+  width: 600px !important;
+  margin: 20px;
+}
+
+.content {
+  margin: 20px 0;
+}
+
+.preview {
+  max-width: 200px;
 }

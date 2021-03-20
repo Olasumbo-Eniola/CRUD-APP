@@ -2,7 +2,7 @@ import React from 'react'
 import axios from "axios";
 import swal from "sweetalert"
 import ItemUpload from "./itemupload"
-import Modal from "./Modal/Modal.component"
+import Modal from "./Modal/Modal"
 
 export default class Items extends React.Component{
   
@@ -10,7 +10,7 @@ export default class Items extends React.Component{
       constructor(props) {
         super(props);
         this.state = { 
-          files: null, 
+
           name: "",
           title: "",
           price: 0,
@@ -84,23 +84,7 @@ id = id.replace("/category/", "")
           this.setState({name: e.target.value})
       }
         
-        handleSubmit = (e) => {
-         
-          console.log(this.state);
-          let form_data = new FormData();
-          form_data.append('file', this.state.files, this.state.files.name);
-          form_data.append('name', this.state.name);
-          let url = 'https://test.anchoratechs.com/upload';
-          axios.post(url, form_data, {
-            headers: {
-              'content-type': 'multipart/form-data'
-            }
-          })
-              .then(res => {
-                console.log(res.data);
-              })
-              .catch(err => console.log(err))
-        };
+
     render(){
 
         return(
@@ -115,7 +99,7 @@ id = id.replace("/category/", "")
                    <div className="card item-card" key={Item.id} >
                      
                      <div className="skelenton"   >
-                   {/*   <img src={Item.image_url.image} alt=""/>*/}
+                    <img src={Item.image_link} alt=""/>
                      </div>
                 <div className="card-body mt-2">
                          <p className="item-name">Name: {Item.title}</p>
@@ -155,12 +139,7 @@ id = id.replace("/category/", "")
                 >
 
                     <h4>Edit Item</h4>
-            <div className="upload-img" onKeyDown={this.handleSubmit} >
-                    <label className="actual-file" style={{cursor: "pointer"}}><img src="/upload.svg" alt="" /><p>Select Image</p>
-                       <input type="file"   accept="image/png, image/jpeg, image/jpg"  name="" id="" hidden  />
-                     </label>
-                  
-                   </div>
+         
               <div className="card-body">
                       
                         
