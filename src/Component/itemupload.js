@@ -83,7 +83,7 @@ handleCategory = (e) => {
           .then(res => {
             console.log(res.data);
             swal("Item Created Successfully", "", "success")
-          //  window.location.reload()
+            window.location.reload()
           })
           .catch(err => console.log(err))
     }
