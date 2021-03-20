@@ -8,7 +8,7 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background:rgba(91, 91, 236, 0.87);
+  background:#f5f2fc;
   box-shadow: inset 0 0 1px grey;
 }
 
@@ -25,7 +25,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #f5f2fc;
+  background: rgba(91, 91, 236, 0.87);
   border-radius: 10px;
 }
 .card{
@@ -104,9 +104,113 @@ h2{
 }
 .cat{
   color: #f5f2fc;
-  padding-top:10px;
-  padding-left: 20px;
+  font-size: 20px !important;
+
+}
+.category{
+  position: relative;
+  margin-bottom: 5px;
+ 
+}
+.icon i{
+  color: #f5f2fc;
+}
+.icon{
+  background: none;
+  position: absolute;
+  right: 0px;
+}
+.icon-1 i{
+  color: #f5f2fc;
+}
+.icon-1{
+  background: none;
+  position: absolute;
+  right: 28px;
 }
 .cate{
   width:200px;
+}
+.card{
+  width: 33%;
+  height: 600px;
+  margin-bottom: 20px;
+  margin-top: 20px
+}
+.skelenton{
+  height: 300px !important;
+  background-color: #f5f2fc;
+}
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  transform: scale(1.5);
+}
+.actual-file{
+
+  padding: 5px;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.card-body{
+  position: relative;
+}
+.buttons{
+  position: absolute;
+bottom: 0px;
+}
+.item-name{
+  font-size: 24px;
+  font-weight: 600;
+}
+.description{
+  font-size: 16px
+}
+
+@media screen and (max-width: 992px){
+  .cate{
+    width: 150px
+  }
+  .card{
+    width: 50%;
+  }
+  .sidenav{
+    width: 200px;
+  }
+  .main{
+    margin-left: 200px !important;
+  }
+}
+@media screen and (max-width: 768px){
+  .card{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 411px){
+  .sidenav{
+    width: 150px;
+  }
+  .main{
+    margin-left: 150px !important;
+  }
+  .cate{
+    width: 100px;
+  }
+}
+.diff{
+  width: auto !important;
+  height: 550px !important;
 }
