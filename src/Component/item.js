@@ -34,7 +34,7 @@ export default class Items extends React.Component{
       }
       closeModal = () => {
         //make body scrollable again
-        const scrollY =document.body.style.top;
+      //  const scrollY =document.body.style.top;
         document.body.style.position = '';
         document.body.style.width = 'auto';
         document.body.style.top = '';
