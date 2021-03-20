@@ -111,7 +111,7 @@ handleCategory = (e) => {
                         <input type="number" className="form-control" name="" id="" aria-describedby="helpId" placeholder="Price" onChange={this.handlePrice} value={this.state.price}  />
             
 
-                
+                <small style={{fontSize: "10px"}}>All fields are required</small>
                      <button className="btn bg-white" type="submit">Press Enter to Submit</button>
       </div>
     
